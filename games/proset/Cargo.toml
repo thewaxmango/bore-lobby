@@ -1,10 +1,10 @@
 [package]
-name = "socket-lobby-proset"
+name = "bore-lobby-proset"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-socket-lobby-common = { path = "../../common" }
+bore-lobby-common = { path = "../../common" }
 serde = { workspace = true }
 serde_json = { workspace = true }
 rand = { workspace = true }

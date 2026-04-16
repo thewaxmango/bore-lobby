@@ -3,7 +3,7 @@ mod lobby;
 
 use bore_cli::client::Client as BoreClient;
 use lobby::Lobby;
-use socket_lobby_common::game::GameRegistry;
+use bore_lobby_common::game::GameRegistry;
 use std::sync::Arc;
 use std::time::Duration;
 use tokio::net::TcpListener;
@@ -17,7 +17,7 @@ async fn main() {
         .unwrap_or_else(|| "0.0.0.0:9900".to_string());
     let listener = TcpListener::bind(&addr).await.expect("failed to bind");
     let local_port = listener.local_addr().expect("local_addr").port();
-    println!("socket-lobby server listening on {addr}");
+    println!("bore-lobby server listening on {addr}");
 
     // Open a bore tunnel so remote players can connect without port
     // forwarding, then keep it alive in a supervisor task that
@@ -33,7 +33,7 @@ async fn main() {
 
     // Register available games
     let mut registry = GameRegistry::new();
-    socket_lobby_proset::register_games(&mut registry);
+    bore_lobby_proset::register_games(&mut registry);
 
     let lobby = Arc::new(Mutex::new(Lobby::new(registry)));
 

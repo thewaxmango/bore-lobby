@@ -103,6 +103,52 @@ dependencies = [
 ]
 
 [[package]]
+name = "bore-lobby-client"
+version = "0.1.0"
+dependencies = [
+ "bore-lobby-common",
+ "bore-lobby-proset",
+ "crossterm",
+ "futures-lite",
+ "ratatui",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "bore-lobby-common"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "bore-lobby-proset"
+version = "0.1.0"
+dependencies = [
+ "bore-lobby-common",
+ "crossterm",
+ "rand",
+ "ratatui",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "bore-lobby-server"
+version = "0.1.0"
+dependencies = [
+ "bore-cli",
+ "bore-lobby-common",
+ "bore-lobby-proset",
+ "rand",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "bumpalo"
 version = "3.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -942,52 +988,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 
 [[package]]
-name = "socket-lobby-client"
-version = "0.1.0"
-dependencies = [
- "crossterm",
- "futures-lite",
- "ratatui",
- "serde_json",
- "socket-lobby-common",
- "socket-lobby-proset",
- "tokio",
-]
-
-[[package]]
-name = "socket-lobby-common"
-version = "0.1.0"
-dependencies = [
- "serde",
- "serde_json",
- "tokio",
-]
-
-[[package]]
-name = "socket-lobby-proset"
-version = "0.1.0"
-dependencies = [
- "crossterm",
- "rand",
- "ratatui",
- "serde",
- "serde_json",
- "socket-lobby-common",
-]
-
-[[package]]
-name = "socket-lobby-server"
-version = "0.1.0"
-dependencies = [
- "bore-cli",
- "rand",
- "serde_json",
- "socket-lobby-common",
- "socket-lobby-proset",
- "tokio",
-]
-
-[[package]]
 name = "socket2"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1059,9 +1059,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.52.0"
+version = "1.52.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a91135f59b1cbf38c91e73cf3386fca9bb77915c45ce2771460c9d92f0f3d776"
+checksum = "b67dee974fe86fd92cc45b7a95fdd2f99a36a6d7b0d431a231178d3d670bbcc6"
 dependencies = [
  "bytes",
  "libc",

@@ -11,7 +11,7 @@ use crossterm::ExecutableCommand;
 use futures_lite::StreamExt;
 use ratatui::backend::CrosstermBackend;
 use ratatui::Terminal;
-use socket_lobby_common::protocol::ClientMsg;
+use bore_lobby_common::protocol::ClientMsg;
 use std::io::stdout;
 use std::time::Duration;
 use net::Connection;

@@ -4,7 +4,7 @@ pub mod engine;
 pub mod protocol;
 pub mod ui;
 
-use socket_lobby_common::game::GameRegistry;
+use bore_lobby_common::game::GameRegistry;
 
 /// Register all ProSet game variants with the server-side registry.
 pub fn register_games(registry: &mut GameRegistry) {

@@ -23,7 +23,7 @@ pub fn render(f: &mut Frame, app: &App) {
 fn render_name_entry(f: &mut Frame, app: &App) {
     let area = centered_rect(40, 7, f.area());
     let block = Block::default()
-        .title(" socket-lobby ")
+        .title(" bore-lobby ")
         .borders(Borders::ALL);
     let text = vec![
         Line::from(""),
@@ -224,7 +224,7 @@ fn render_in_game(f: &mut Frame, app: &App) {
     // Delegate game rendering to the active game plugin
     match &app.active_game {
         Some(ActiveGame::ProSet(game)) => {
-            socket_lobby_proset::ui::render(
+            bore_lobby_proset::ui::render(
                 f,
                 game,
                 cols[0],

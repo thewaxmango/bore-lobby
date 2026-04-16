@@ -1,4 +1,4 @@
-use socket_lobby_common::protocol::{read_msg, write_msg, ClientMsg, ServerMsg};
+use bore_lobby_common::protocol::{read_msg, write_msg, ClientMsg, ServerMsg};
 use tokio::net::tcp::{OwnedReadHalf, OwnedWriteHalf};
 use tokio::net::TcpStream;
 use tokio::sync::mpsc;

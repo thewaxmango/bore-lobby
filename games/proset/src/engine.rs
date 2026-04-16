@@ -1,6 +1,6 @@
 use rand::seq::SliceRandom;
-use socket_lobby_common::game::{Game, GameEffect, PlayerId};
-use socket_lobby_common::protocol::ServerMsg;
+use bore_lobby_common::game::{Game, GameEffect, PlayerId};
+use bore_lobby_common::protocol::ServerMsg;
 use std::time::Instant;
 
 use crate::card::{exists_set, is_valid_set, Card, GameMode};

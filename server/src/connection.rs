@@ -1,4 +1,4 @@
-use socket_lobby_common::protocol::{read_msg, write_msg, ClientMsg, ServerMsg};
+use bore_lobby_common::protocol::{read_msg, write_msg, ClientMsg, ServerMsg};
 use std::sync::Arc;
 use std::time::Duration;
 use tokio::net::TcpStream;

@@ -1,6 +1,6 @@
 use crossterm::event::{KeyCode, KeyEvent};
-use socket_lobby_common::protocol::{ClientMsg, ServerMsg};
-use socket_lobby_proset::client::ProSetClient;
+use bore_lobby_common::protocol::{ClientMsg, ServerMsg};
+use bore_lobby_proset::client::ProSetClient;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum Screen {
@@ -69,7 +69,7 @@ impl App {
     pub fn new() -> Self {
         // Collect games from all registered game crates
         let mut available_games = Vec::new();
-        available_games.extend(socket_lobby_proset::available_games());
+        available_games.extend(bore_lobby_proset::available_games());
 
         Self {
             screen: Screen::NameEntry,
@@ -305,7 +305,7 @@ impl App {
     /// Try to create an ActiveGame for the given game ID.
     fn create_client_game(game_id: &str) -> Option<ActiveGame> {
         // Try each registered game crate
-        if let Some(client) = socket_lobby_proset::create_client_game(game_id) {
+        if let Some(client) = bore_lobby_proset::create_client_game(game_id) {
             return Some(ActiveGame::ProSet(client));
         }
         None

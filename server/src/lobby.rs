@@ -1,6 +1,6 @@
 use rand::Rng;
-use socket_lobby_common::game::{Game, GameEffect, GameRegistry, PlayerId};
-use socket_lobby_common::protocol::ServerMsg;
+use bore_lobby_common::game::{Game, GameEffect, GameRegistry, PlayerId};
+use bore_lobby_common::protocol::ServerMsg;
 use std::collections::HashMap;
 use tokio::sync::mpsc;
 
